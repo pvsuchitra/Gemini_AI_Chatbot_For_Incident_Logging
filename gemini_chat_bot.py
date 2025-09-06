@@ -27,7 +27,7 @@ client = genai.Client(
 
 def get_completions_from_messages(messages,model="gemini-2.5-flash-lite"):
     config = types.GenerateContentConfig(
-        temperature=0.8
+        temperature=0.4
     )
     response = client.models.generate_content(
         model=model,

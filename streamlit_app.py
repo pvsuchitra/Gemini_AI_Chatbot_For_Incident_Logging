@@ -24,7 +24,7 @@ def main():
     This is the main function that runs the chatbot.
     It prints a welcome message and then enters a loop to get user input.
     """
-    st.title(":female-technologist: :orange[Rumie] Assistant",anchor='RumieAssistant',help=None)
+    st.title("👩‍💻 :orange[Rumie] Assistant",anchor='RumieAssistant',help=None)
     st.subheader("Welcome! This is Rumie, your assistant to all your software problems.",divider=True)
 
     # Initialize chat history
