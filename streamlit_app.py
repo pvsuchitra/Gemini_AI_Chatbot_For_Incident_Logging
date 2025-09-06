@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from gemini_chat_bot import get_bot_response
+import os
 
 def stream_data(anyString):
     for word in anyString.split(" "):
