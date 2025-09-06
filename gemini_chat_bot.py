@@ -1,17 +1,19 @@
 from dotenv import load_dotenv
 import os
 
-# this code loads the API key from local .env file in same folder as your chatbot program.
-#load_dotenv()
-#API_KEY = os.getenv("GEMINI_API_KEY")
+# Try to load from Streamlit secrets first
+API_KEY = st.secrets.get("GEMINI_API_KEY", None)
 
-#we will use streamlit secrets for API
-API_KEY = st.secrets["GEMINI_API_KEY"]
-
+# Fallback: use .env if running locally
 if not API_KEY:
-    print("Error : GEMINI_API_KEY not found in .env file.")
-    print("Please create a .env file and add your API key.")
-    exit()
+    from dotenv import load_dotenv
+    load_dotenv()
+    API_KEY = os.getenv("GEMINI_API_KEY")
+
+# Final check
+if not API_KEY:
+    st.error("❌ API key not found. Please add it to Streamlit secrets or .env file.")
+    st.stop()
 
 from google import genai
 from google.genai import types

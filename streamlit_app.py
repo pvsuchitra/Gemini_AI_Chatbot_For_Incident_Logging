@@ -10,6 +10,8 @@ def stream_data(anyString):
         yield word + " "
         time.sleep(0.02)
 
+#prevent any watchdog warnings when running on Streamlit cloud
+os.environ["STREAMLIT_DISABLE_WATCHDOG_WARNING"] = "true"
 
 # Get the bot's response and print it.
 #bot_response = get_bot_response(prompt)
