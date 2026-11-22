@@ -49,13 +49,20 @@ Gemini_AI_Chatbot_For_Incident_Logging/
    ```bash
    pip install -r requirements.txt
    ```
-4. Configure your Gemini API key (via environment variable or `.streamlit/secrets.toml`, depending on your local setup):
-   ```bash
-   export GEMINI_API_KEY="your_api_key_here"
-   ```
-   *(On Windows Command Prompt: `set GEMINI_API_KEY=your_api_key_here`)*
+4. Configure your Gemini API key (via environment variable or in `.streamlit/secrets.toml`, depending on your local setup):
+      ```bash
+      export GEMINI_API_KEY="your_api_key_here"
+      ```
+      *(On Windows Command Prompt: `set GEMINI_API_KEY=your_api_key_here`)*
+   
+      OR set .streamlit/secrets.toml:
+      ```bash
+      # Google Gemini API Key
+      # Get your key from Google AI Studio: https://aistudio.google.com/
+      GEMINI_API_KEY="your_gemini_api_key_here"
+      ```
 
-5. Run the Streamlit app:
+6. Run the Streamlit app:
    ```bash
    streamlit run streamlit_app.py
    ```
