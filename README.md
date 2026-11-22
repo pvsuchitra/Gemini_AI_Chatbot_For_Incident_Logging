@@ -20,7 +20,9 @@ A first-line (L1) AI incident assistant built with **Python**, **Streamlit**, an
 Gemini_AI_Chatbot_For_Incident_Logging/
 ├── .devcontainer/        # Dev container configuration
 ├── .gitignore            # Git ignore rules
-├── gemini_chat_bot.py    # Core Gemini API chatbot logic
+├── .streamlit/
+│   └── secrets.toml.example      # Environment variable template
+├── gemini_chat_bot.py    # Core Gemini API chatbot module (imported by streamlit_app.py)
 ├── streamlit_app.py      # Streamlit web application entry point
 ├── requirements.txt      # Python dependencies
 └── README.md
